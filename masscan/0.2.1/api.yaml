@@ -1,0 +1,40 @@
+walkoff_version: 0.2.1
+app_version: 0.2.1
+name: masscan
+description: Mass IP port scanner
+contact_info:
+  name: "@lion9453"
+  url: "https://github.com/lion9453"
+  email: ""
+tags:
+  - Scanner
+categories:
+  - Network
+actions:
+  - name: scan
+    description: scan ip
+    parameters:
+      - name: ip 
+        description: ip
+        multiline: false
+        example: "1.1.1.1"
+        required: true
+        schema:
+          type: string
+      - name: port 
+        description: port
+        multiline: false
+        example: "1-65535"
+        required: true
+        schema:
+          type: string
+      - name: rate
+        description: rate
+        multiline: false
+        example: "1000"
+        required: true
+        schema:
+          type: string
+    returns:
+      schema:
+        type: string
